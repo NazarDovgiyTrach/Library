@@ -1,0 +1,10 @@
+div.table-content{
+    padding-left: 15rem;
+}
+
+#search-submit{
+    height: 0px;
+    width: 0px;
+    border: none;
+    padding: 0px;
+}

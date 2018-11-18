@@ -1,0 +1,203 @@
+<div id="nav-bar">
+    <!-- Sidenav -->
+    <nav class="navbar navbar-vertical fixed-left navbar-expand-md navbar-light bg-white" id="sidenav-main">
+        <div class="container-fluid">
+            <!-- Toggler -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#sidenav-collapse-main"
+                    aria-controls="sidenav-main" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- Brand -->
+            <a class="navbar-brand pt-0" href="/">
+                <img src="/static/assets/img/logo.png" class="navbar-brand-img" alt="...">
+            </a>
+            <!-- Collapse -->
+            <div class="collapse navbar-collapse" id="sidenav-collapse-main">
+                <!-- Navigation -->
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a id="POETRY_AND_DRAMATURGY" class="nav-link" href="#">
+                            <i class="ni ni-book-bookmark text-red"></i> POETRY AND DRAMATURGY
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a id="ADVENTURE" class="nav-link" href="#">
+                            <i class="ni ni-user-run text-green"></i> ADVENTURE
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a id="FANTASTIC" class="nav-link" href="#">
+                            <i class="ni ni-spaceship text-indigo"></i> FANTASTIC
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a id="HUMOR" class="nav-link" href="#">
+                            <i class="ni ni-satisfied text-yellow"></i> HUMOR
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a id="SCIENTIFIC_AND_EDUCATIONAL" class="nav-link" href="#">
+                            <i class="ni ni-planet text-blue"></i> SCIENTIFIC AND EDUCATIONAL
+
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a id="NOVELS" class="nav-link" href="#">
+                            <i class="ni ni-favourite-28 text-pink"></i> NOVELS
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a id="HOME_AND_FAMILY" class="nav-link" href="#">
+                            <i class="ni ni-shop text-yellow"></i>HOME AND FAMILY
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a id="DOCUMENTARIES" class="nav-link active" href="#" data-genre="DOCUMENTARIES">
+                            <i class="ni ni-atom text-gray"></i> DOCUMENTARIES
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a id="FOR_KIDS" class="nav-link" href="#" data-genre="FOR_KIDS">
+                            <i class="ni ni-air-baloon text-blue"></i> FOR KIDS
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a id="DETECTIVES" class="nav-link" href="#">
+                            <i class="ni ni-glasses-2 text-dark"></i> DETECTIVES
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Main content -->
+    <div class="main-content">
+        <!-- Top navbar -->
+        <nav class="navbar navbar-top navbar-expand-md navbar-dark" id="navbar-main">
+            <div class="container-fluid">
+                <!-- Brand -->
+                <a class="h4 mb-0 text-white text-uppercase d-none d-lg-inline-block" href="/">Library</a>
+                <!-- Form -->
+                <form class="navbar-search navbar-search-dark form-inline mr-3 d-none d-md-flex ml-lg-auto" action="#">
+                    <div class="form-group mb-0">
+                        <div class="input-group input-group-alternative">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"><i class="fas fa-search"></i></span>
+                            </div>
+                            <input id="search-book" class="form-control" placeholder="Search" type="text" autocomplete="off"  >
+                            <input id="search-submit" type="submit" onclick="search()"/>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </nav>
+        <!-- Header -->
+        <div class="header bg-gradient-primary pb-8 pt-5 pt-md-8">
+            <div class="container-fluid">
+                <div class="header-body">
+                    <!-- Card stats -->
+                    <div class="row">
+                        <div class="col-xl-2 col-lg-6">
+                            <div class="card card-stats mb-4 mb-xl-0">
+                                <div class="card-body">
+                                    <button type="button" class="btn btn-success mt-2" data-toggle="modal"
+                                            id="add_book_button" data-target="#add_book_modal"
+                                    >Add book
+                                    </button>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-xl-6 col-lg-6">
+                            <div class="card card-stats mb-4 mb-xl-0">
+                                <div class="card-body">
+                                    <a class="icon icon-shape bg-danger text-white rounded-circle shadow" href="#"onclick="abcSearch('A/')">
+                                        <i><b>A</b></i>
+                                    </a>
+                                    <a class="icon icon-shape bg-orange text-white rounded-circle shadow" href="#"onclick="abcSearch('B/')">
+                                        <i><b>B</b></i>
+                                    </a>
+                                    <a class="icon icon-shape bg-blue text-white rounded-circle shadow" href="#"onclick="abcSearch('C/')">
+                                        <i><b>C</b></i>
+                                    </a>
+                                    <a class="icon icon-shape bg-green text-white rounded-circle shadow" href="#"onclick="abcSearch('D/')">
+                                        <i><b>D</b></i>
+                                    </a>
+                                    <a class="icon icon-shape bg-pink text-white rounded-circle shadow" href="#"onclick="abcSearch('E/')">
+                                        <i><b>E</b></i>
+                                    </a>
+                                    <a class="icon icon-shape bg-gray text-white rounded-circle shadow" href="#"onclick="abcSearch('F/')">
+                                        <i><b>F</b></i>
+                                    </a>
+                                    <a class="icon icon-shape bg-danger text-white rounded-circle shadow" href="#"onclick="abcSearch('G/')">
+                                        <i><b>G</b></i>
+                                    </a>
+                                    <a class="icon icon-shape bg-green text-white rounded-circle shadow" href="#"onclick="abcSearch('H/')">
+                                        <i><b>H</b></i>
+                                    </a>
+                                    <a class="icon icon-shape bg-blue text-white rounded-circle shadow" href="#"onclick="abcSearch('I/')">
+                                        <i><b>I</b></i>
+                                    </a>
+                                    <a class="icon icon-shape bg-orange text-white rounded-circle shadow" href="#"onclick="abcSearch('J/')">
+                                        <i><b>J</b></i>
+                                    </a>
+                                    <a class="icon icon-shape bg-blue text-white rounded-circle shadow" href="#"onclick="abcSearch('K/')">
+                                        <i><b>K</b></i>
+                                    </a>
+                                    <a class="icon icon-shape bg-yellow text-white rounded-circle shadow" href="#"onclick="abcSearch('L/')">
+                                        <i><b>L</b></i>
+                                    </a>
+                                    <a class="icon icon-shape bg-purple text-white rounded-circle shadow" href="#"onclick="abcSearch('M/')">
+                                        <i><b>M</b></i>
+                                    </a>
+                                    <a class="icon icon-shape bg-blue text-white rounded-circle shadow" href="#"onclick="abcSearch('N/')">
+                                        <i><b>N</b></i>
+                                    </a>
+                                    <a class="icon icon-shape bg-green text-white rounded-circle shadow" href="#"onclick="abcSearch('O/')">
+                                        <i><b>O</b></i>
+                                    </a>
+                                    <a class="icon icon-shape bg-danger text-white rounded-circle shadow" href="#"onclick="abcSearch('P/')">
+                                        <i><b>P</b></i>
+                                    </a>
+                                    <a class="icon icon-shape bg-yellow text-white rounded-circle shadow" href="#"onclick="abcSearch('Q/')">
+                                        <i><b>Q</b></i>
+                                    </a>
+                                    <a class="icon icon-shape bg-orange text-white rounded-circle shadow" href="#"onclick="abcSearch('R/')">
+                                        <i><b>R</b></i>
+                                    </a>
+                                    <a class="icon icon-shape bg-pink text-white rounded-circle shadow" href="#"onclick="abcSearch('S/')">
+                                        <i><b>S</b></i>
+                                    </a>
+                                    <a class="icon icon-shape bg-blue text-white rounded-circle shadow" href="#"onclick="abcSearch('T/')">
+                                        <i><b>T</b></i>
+                                    </a>
+                                    <a class="icon icon-shape bg-danger text-white rounded-circle shadow" href="#"onclick="abcSearch('U/')">
+                                        <i><b>U</b></i>
+                                    </a>
+                                    <a class="icon icon-shape bg-orange text-white rounded-circle shadow" href="#"onclick="abcSearch('V/')">
+                                        <i><b>V</b></i>
+                                    </a>
+                                    <a class="icon icon-shape bg-green text-white rounded-circle shadow" href="#"onclick="abcSearch('W/')">
+                                        <i><b>W</b></i>
+                                    </a>
+                                    <a class="icon icon-shape bg-purple text-white rounded-circle shadow" href="#"onclick="abcSearch('X/')">
+                                        <i><b>X</b></i>
+                                    </a>
+                                    <a class="icon icon-shape bg-blue text-white rounded-circle shadow" href="#"onclick="abcSearch('Y/')">
+                                        <i><b>Y</b></i>
+                                    </a>
+                                    <a class="icon icon-shape bg-orange text-white rounded-circle shadow" href="#"onclick="abcSearch('Z/')">
+                                        <i><b>Z</b></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--Footer-->
+
