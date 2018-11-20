@@ -56,19 +56,24 @@ public class BookService implements IBookService {
     }
 
     @Override
+    public Long getPagesCount(String title) {
+        return (long) ceil((double) dao.countByTitleIgnoreCaseLike(title) / MAX_RESULT);
+    }
+
+    @Override
     public List<BookResponseDTO> getBooks(int page) {
         return dao.findAll(PageRequest.of(page - 1, MAX_RESULT)).getContent().stream().
                 map(v -> (mapper.map(v, BookResponseDTO.class))).collect(Collectors.toList());
     }
-
+    @Override
     public List<BookResponseDTO> getBooks(Genre genre, int page) {
         return dao.findByGenre(genre, PageRequest.of(page - 1, MAX_RESULT)).stream().
                 map(v -> (mapper.map(v, BookResponseDTO.class))).collect(Collectors.toList());
     }
 
     @Override
-    public List<BookResponseDTO> search(String keyword) {
-        return dao.findAllByTitleIgnoreCaseLike(keyword).stream().
+    public List<BookResponseDTO> search(String keyword,int page) {
+        return dao.findAllByTitleIgnoreCaseLike(keyword,PageRequest.of(page - 1, MAX_RESULT)).stream().
                 map(v -> (mapper.map(v, BookResponseDTO.class))).collect(Collectors.toList());
     }
 

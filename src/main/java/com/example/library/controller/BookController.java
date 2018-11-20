@@ -64,6 +64,11 @@ public class BookController {
         return bookService.getPagesCount(genre);
     }
 
+    @GetMapping("/count/{title}")
+    public Long getCount(@PathVariable("title") String title) {
+        return bookService.getPagesCount(title);
+    }
+
     @GetMapping("/get/{page}")
     public List<BookResponseDTO> getAuthors(@PathVariable("page") int page) {
         return bookService.getBooks(page);
@@ -74,9 +79,9 @@ public class BookController {
         return bookService.getBooks(genre, page);
     }
 
-    @GetMapping("/search/{text}")
-    public List<BookResponseDTO> searchBook(@PathVariable("text") String keyword) {
-        return bookService.search(keyword);
+    @GetMapping("/search/{text}/{page}")
+    public List<BookResponseDTO> searchBook(@PathVariable("text") String keyword,@PathVariable("page") int page) {
+        return bookService.search(keyword,page);
     }
 
     @GetMapping("/download/{id}")

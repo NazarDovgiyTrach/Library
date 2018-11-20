@@ -14,7 +14,7 @@ function abcSearch(letter) {
                     delay:1500
                 });
 
-            }
+            }else {
             $('#pagination').empty();
             $('#pagination').removeData("twbs-pagination");
             $('#pagination').unbind("page");
@@ -27,7 +27,7 @@ function abcSearch(letter) {
                     getAuthorsABC(page, letter);
                 }
             });
-        }
+        }}
     });
 }
 function getAuthorsABC(page, letter) {

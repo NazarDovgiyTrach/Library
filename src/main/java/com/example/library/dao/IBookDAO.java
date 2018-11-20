@@ -17,7 +17,9 @@ public interface IBookDAO extends JpaRepository<Book, Long> {
 
     Long countByGenre(Genre genre);
 
-    List<Book> findAllByTitleIgnoreCaseLike(String keyword);
+    Long countByTitleIgnoreCaseLike(String title);
+
+    List<Book> findAllByTitleIgnoreCaseLike(String title, Pageable pageable);
 
     @Query("SELECT b.filename FROM Book b where b.id = :id")
     String findFilenameById(@Param("id") Long id);

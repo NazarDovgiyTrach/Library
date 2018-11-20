@@ -16,11 +16,13 @@ public interface IBookService {
 
     Long getPagesCount(Genre genre);
 
+    Long getPagesCount(String title);
+
     List<BookResponseDTO> getBooks(int page);
 
     List<BookResponseDTO> getBooks(Genre genre, int page);
 
-    List<BookResponseDTO> search(String keyword);
+    List<BookResponseDTO> search(String keyword,int page);
 
     String getFilename(Long id);
 }

@@ -74,7 +74,7 @@ function setBookGenrePagination(genre) {
                     styling: 'bootstrap3',
                     delay: 1500
                 });
-            }
+            }else{
             $('.pagination').empty();
             $('.pagination').removeData("twbs-pagination");
             $('.pagination').unbind("page");
@@ -87,7 +87,7 @@ function setBookGenrePagination(genre) {
                     getBooksGenre(page, genre);
                 }
             });
-        }
+        }}
     });
 }
 
